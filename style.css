@@ -1,0 +1,217 @@
+/* =============================================================================
+ * MagicPuddle OS - Waybar configuration
+ *
+ * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+ * =========================================================================== */
+
+/* -----------------------------------------------------------------------------
+ * Keyframes
+ * -------------------------------------------------------------------------- */
+
+
+/*
+Polar Night
+nord0  #2e3440
+nord1  #3b4252
+nord2  #434c5e
+nord3  #4c566a
+Snow Storm
+nord4  #d8dee9
+nord5  #e5e9f0
+nord6  #eceff4
+Frost
+nord7  #8fbcbb
+nord8  #88c0d0
+nord9  #81a1c1
+nord10 #5e81ac
+Aurora
+nord11 #bf616a
+nord12 #d08770
+nord13 #ebcb8b
+nord14 #a3be8c
+nord15 #b48ead
+*/
+
+/* -----------------------------------------------------------------------------
+ * Base styles
+ * -------------------------------------------------------------------------- */
+
+/* Reset all styles */
+
+* {
+    color: rgba(255, 255, 255, 0.77);
+    border: 0px;
+    font-family:"system-ui";
+    font-size: 0.77rem;
+    margin-right: 0.2rem;
+    margin-left: 0.2rem;
+    padding: 0.02rem;
+    padding-bottom:0.01rem;
+    padding-top:0.01rem;
+   }
+
+window#waybar {
+    background: rgba(10, 10, 10, 0.66);
+/*
+    border-color: #a117f2;
+    border: 0.01rem;
+    border-style: solid;
+    border-radius: 3rem;
+*/
+}
+
+#workspaces button {
+    border-bottom: 0.2rem;
+    border-top: 0.2rem;
+    color: rgba(99, 19, 199, 4);
+    border-color: rgba(99, 19, 199, 9);
+    border-style: solid;
+    border-radius: 3rem;
+}
+
+#workspaces button.focused {
+  border-bottom: 0.2rem;
+  border-top: 0.2rem;
+  border-color: rgba(39, 255, 14, 99);
+  background-color: rgba(99, 19, 199, 45);
+  border-style: solid;
+  border-radius: 3rem;
+}
+
+#mode {
+    color: rgba(255, 255, 255, 99);
+}
+
+#clock, #battery, #cpu, #memory,#idle_inhibitor, #temperature,#custom-keyboard-layout, #backlight, #network, #pulseaudio, #mode, #tray, #window,#custom-launcher,#custom-power,#custom-pacman {
+    padding: 0 0.2rem 0 0.3rem;
+    border-bottom: 2px;
+    border-top: 2px;
+    border-color: rgba(99, 19, 199, 99);
+    border-style: solid;
+    margin: 0.3rem;
+    border-radius: 2rem;
+}
+
+/* -----------------------------------------------------------------------------
+ * Module styles
+ * -------------------------------------------------------------------------- */
+
+#clock {
+    font-size: 0.96rem;
+    border-color: rgba(55, 222, 55, 99);
+    border-style: solid;
+    margin-right: 10.6rem;
+}
+
+#backlight {
+    color: #ebcb8b;
+}
+
+#battery {
+    color: #d8dee9;
+}
+
+#battery.charging {
+    color: #81a1c1;
+}
+
+@keyframes blink {
+    to {
+        color: #4c566a;
+        background-color: #eceff4;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background: #bf616a;
+    color: #eceff4;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#cpu {
+    color:#a3be8c ;
+}
+
+#memory {
+    color: #d3869b;
+}
+
+#network.disabled {
+    color:#bf616a;
+}
+
+#network{
+    color:#a3be8c;
+}
+
+#network.disconnected {
+    color: #bf616a;
+}
+
+#pulseaudio {
+    color: #b48ead;
+}
+
+#pulseaudio.muted {
+    color: #3b4252;
+}
+
+#temperature {
+    color: #8fbcbb;
+}
+
+#temperature.critical {
+    color: #bf616a;
+}
+
+#idle_inhibitor {
+   color: #ebcb8b;
+}
+
+#tray {
+}
+
+#custom-launcher,#custom-power{
+  border-style: hidden;
+  margin: 0.1rem;
+}
+
+#custom-power{
+  margin-right: 1rem;
+  margin-left: 0.6rem;
+  padding: 0.7rem 0.7rem 0.7rem 0.7rem;
+  color: rgba(199, 77, 99, 99);
+  border: 0.2rem;
+  border-style: solid;
+  border-color: rgba(39, 255, 14, 99);
+  border-radius: 3rem;
+}
+#custom-launcher{
+  margin-left: 1rem;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  color: rgba(199, 77, 199, 99);
+  border: 0.2rem;
+  border-style: solid;
+  border-color: rgba(39, 255, 14, 99);
+  border-radius: 3rem;
+}
+
+#window{
+	border-radius: 3rem;
+  border-style: dotted;
+  margin-left: 3rem;
+}
+#mode{
+    margin:0.02rem;
+    margin-left: 1rem;
+}
+
+#custom-keyboard-layout{
+   color:#d08770;
+   border-radius: 3rem;
+}

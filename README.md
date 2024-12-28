@@ -1,38 +1,52 @@
 <p align="center">
-  <img src="https://github.com/MagicPuddle/media/blob/875e5e99f1e108c12e5da44c4e8a571af9ca7776/banner.png" alt="MagicPuddle Banner">
+  <img src="https://github.com/MagicPuddle/media/blob/875e5e99f1e108c12e5da44c4e8a571af9ca7776/banner.png" alt="MagicPuddle Banner" style="max-width: 100%; border-radius: 12px;">
 </p>
 
 # :bar_chart: MagicPuddle Waybar Config
 
-Welcome to the **MagicPuddle Waybar Config** repository! Here, you'll find our customized configuration files for Waybar – a highly customizable status bar for the Sway window manager.
+**MagicPuddle Waybar Config** repository contains our meticulously crafted configuration files for Waybar – the perfect status bar for Sway window manager enthusiasts who value customization and efficiency.
 
-## :sparkles: About Waybar
+---
 
-Waybar is a versatile status bar that integrates seamlessly with Sway, providing essential information at a glance. With customizable modules and an attractive interface, it enhances your Sway workflow and user experience.
+## :sparkles: What is Waybar?
 
-## :computer: Configuration Installation
+**Waybar** is a modern, highly customizable status bar designed for the Sway window manager. It combines functionality with an elegant interface, offering essential system information and tools at a glance. With support for multiple modules, Waybar seamlessly adapts to your workflow and aesthetic preferences.
 
-To incorporate our Waybar configuration settings, follow these steps:
+---
 
-1. Clone this repository:
+## :hammer_and_wrench: Installation Guide
+
+Follow these simple steps to apply our Waybar configuration:
+
+1. Clone this repository to your Waybar configuration directory:
     ```bash
     git clone git@github.com:MagicPuddle/waybar-config.git $HOME/.config/waybar
     ```
 
-2. Modify the configuration files to suit your preferences.
+2. Edit the configuration files to suit your preferences. You'll find options to customize modules, colors, fonts, and more.
 
-3. Restart Sway for the changes to take effect.
+3. Restart Sway for the changes to take effect:
+    ```bash
+    swaymsg reload
+    ```
 
-## :wrench: Customization
+---
 
-Our Waybar configurations offer a starting point for customization. Tweak, add, or remove modules to create a status bar tailored to your needs.
+## :art: Customization Made Simple
 
-## :floppy_disk: Contribute
+Our configurations are designed as a flexible starting point. You can:
+- Add or remove modules.
+- Modify styling to match your preferred theme.
 
-We invite the community to contribute. If you have enhancements, fixes, or new modules to propose, please review our [contribution guidelines](CONTRIBUTING.md) and submit a pull request.
+---
 
-## :earth_americas: Connect with MagicPuddle
+## :handshake: Contributing to MagicPuddle
+ 
+Here’s how you can contribute:
+1. Review our [Contribution Guidelines](CONTRIBUTING.md).
+2. Fork the repository, make your changes, and submit a pull request.
 
-Visit our [official website](https://magicpuddle.netlify.app/) to discover our hardware, services, and community.
+---
 
-Elevate your Sway experience with our Waybar configurations – Happy computing! :rocket:
+Elevate your Sway experience with **MagicPuddle Waybar Config** – customization made effortless.  
+Happy tinkering and computing! :rocket:
